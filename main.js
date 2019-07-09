@@ -2,7 +2,7 @@ const http = require("http");
 const fs = require("fs");
 
 
-const port = 8080
+const port = process.env.PORT || 8080;
 
 function route_index(request, response) {
   fs.readFile("templates/index.html", function (error, data) {
