@@ -6,3 +6,90 @@
 html {
   font-family: pixelated;
 }
+body {
+  margin: 0;
+  background: url('/image/skull.png');
+  background-size: 30px 30px;
+  background-color: #b6a47c;
+  background-attachment:fixed;
+}
+a {
+  color: #734500;
+  text-decoration: underline;
+}
+a:visited {
+  color: #734500;
+}
+.main-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+.main-title {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 60px;
+}
+.main-des {
+  text-align: center;
+  font-size: 25px;
+}
+.wrapper {
+  width: 60%;
+  margin: 12% auto 2% auto;
+  padding: 15px;
+  background-color: #ffecb3;
+  border-radius: 5px;
+}
+.wrapper h2 {
+  color: #a56300;
+  font-size: 30px;
+}
+.download-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.download-inner {
+  max-width: 90px;
+}
+.os-logo {
+  width: 90px;
+  height: 90px;
+}
+.os-name {
+  text-align: center;
+}
+.os-download {
+  display: block;
+  width: min-content;
+  margin: auto;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #734500;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  div.wrapper {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+  h1.main-title {
+    margin-top: 30px;
+  }
+  p.main-des {
+    margin-bottom: 60px;
+  }
+  img.main-image {
+    display: none;
+  }
+  body {
+    background: #ffecb3;
+  }
+}

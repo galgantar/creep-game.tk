@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="styles/general.css">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creep</title>
   </head>
   <body>
-    <img src="/image/background.jpg">
-    <h1>Creep</h1>
-    <p>Creep is a platformer minigame written in Python programming language</p>
-    <h1>Download</h1>
-    <p>Download a game here: </p>
+    <img class="main-image" src="image/background.jpg">
+    <h1 class="main-title">Creep</h1>
+    <p class="main-des">Creep is a platformer minigame written in Python programming language</p>
+
+    <div class="wrapper">
+      <h2>Download</h2>
+      <p>Download the game here:</p>
+
+      <div class="download-container">
+        <div class="download-inner">
+          <img class="os-logo" src="svg/windows.svg">
+          <p class="os-name">Windows</p>
+          <a class="os-download" href="download/windows" download>Download</a>
+        </div>
+        <div class="download-inner">
+          <img class="os-logo" src="svg/apple.svg">
+          <p class="os-name">OS X (comming soon)</p>
+          <!--<a class="os-download" href="#">Download</a>-->
+        </div>
+        <div class="download-inner">
+          <img class="os-logo" src="svg/linux.svg">
+          <p class="os-name">Linux (comming soon)</p>
+          <!--<a class="os-download" href="#">Download</a>-->
+        </div>
+      </div>
+
+      <h2>Controls</h2>
+      <ul>
+        <li>Move: ArrowLeft, ArrowRight</li>
+        <li>Jump: ArrowUp</li>
+        <li>Shoot: Space</li>
+      </ul>
+      <h2>Credits</h2>
+      <ul>
+        <li>Skeleton sprite: Jesse M, <a href="https://jesse-m.itch.io/skeleton-pack" target="_blank">jesse-m.itch.io/skeleton-pack</a></li>
+        <li>Background art: Alex Law, <a href="http://alex-law.com" target="_blank">alex-law.com</a></li>
+      </ul>
+      <h2>Source code</h2>
+      <ul>
+        <li>Game: <a href="https://github.com/galgantar/creep" target="_blank">github.com/galgantar/creep</a></li>
+        <li>Website: <a href="https://github.com/galgantar/creep-game.tk" target="_blank">github.com/galgantar/creep-game.tk</a></li>
+      </ul>
+    </div>
   </body>
 </html>
