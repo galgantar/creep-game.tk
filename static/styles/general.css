@@ -74,6 +74,10 @@ a:visited {
   background-color: #734500;
   color: white;
 }
+.general-image {
+  width: 100%;
+  border-radius: 5px;
+}
 
 @media (max-width: 600px) {
   div.wrapper {
