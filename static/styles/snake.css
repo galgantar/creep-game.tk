@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'pixelated';
+  src: url('/fonts/04b03.ttf') format('truetype');
+}
+html {
+  font-family: "pixelated";
+}
+body {
+  margin: 0;
+  background: #ffecb3;
+}
+h1 {
+  text-align: center;
+  color: #a56300;
+}
+
+#polje {
+  border-style: solid;
+  border-width: 10px;
+  border-color: #ad9f9f;
+  width: 50%;
+  height: 400px;
+  margin: auto;
+  background-color: #7b617b;
+}
+#element {
+  border-style: solid;
+  border-width: 4px;
+  border-color: #6f3c3c;
+  width: 30px;
+  height: 30px;
+  background-color: #745353;
+  margin: auto;
+  margin-top: 150px;
+  box-sizing: border-box;
+}
+#gumbi {
+  margin-top: 10px;
+  text-align: center;
+  word-spacing: 10px;
+}
+.gumb0 {
+  padding: 5px;
+  font-size: 20px;
+  margin: 5px;
+  font-family: "pixelated";
+  border-style: solid;
+  border-width: 4px;
+  border-color: #6f3c3c;
+  background-color: #b28c8c;
+}
+
+.gumb0:focus {
+  outline: none;
+}
+.gumb0:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  div#polje {
+    width: 90%;
+  }
+}

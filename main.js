@@ -4,8 +4,8 @@ const fs = require("fs");
 
 const port = process.env.PORT || 8080;
 
-function route_index(request, response) {
-  fs.readFile("templates/index.html", function (error, data) {
+function route_html(request, response, filename) {
+  fs.readFile(`templates/${filename}`, function (error, data) {
     if (error) {
       route_500(request, response, error);
       return;
@@ -26,6 +26,20 @@ function route_css(request, response, filename) {
     }
 
     response.writeHead(200, {"Content-type" : "text/css"});
+    response.write(data);
+    response.end();
+    console.log(`Responded to: '${request.url}' 200`);
+  });
+};
+
+function route_script(request, response, filename) {
+  fs.readFile(`static/scripts/${filename}`, function (error, data) {
+    if (error) {
+      route_404(request, response, error);
+      return;
+    }
+
+    response.writeHead(200, {"Content-type" : "application/javascript"});
     response.write(data);
     response.end();
     console.log(`Responded to: '${request.url}' 200`);
@@ -117,11 +131,19 @@ const server = http.createServer((request, response) => {
 
 
   if (url == "/") {
-    route_index(request, response);
+    route_html(request, response, "index.html");
+  }
+
+  else if (url == "/snake") {
+    route_html(request, response, "snake.html");
   }
 
   else if (path[1] == "styles") {
     route_css(request, response, path[2]);
+  }
+
+  else if (path[1] == "scripts") {
+    route_script(request, response, path[2]);
   }
 
   else if (path[1] == "image") {

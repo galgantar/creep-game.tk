@@ -3,6 +3,10 @@
   src: url('/fonts/04b03.ttf') format('truetype');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: pixelated;
 }
@@ -12,6 +16,9 @@ body {
   background-size: 30px 30px;
   background-color: #b6a47c;
   background-attachment:fixed;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 a {
   color: #734500;
